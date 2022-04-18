@@ -11,6 +11,7 @@ import applicationByYahyaBoyali.vetApplication.core.utilities.results.SuccessDat
 import applicationByYahyaBoyali.vetApplication.dataAccess.abstracts.AnimalDao;
 import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,12 +19,18 @@ import org.springframework.stereotype.Service;
  * @author yahya
  */
 @Service
-public class AnimalManager implements AnimalService{
+public class AnimalManager implements AnimalService {
 
     private AnimalDao animalDao;
+
+    @Autowired
+    public AnimalManager(AnimalDao animalDao) {
+        this.animalDao = animalDao;
+    }
+
     @Override
     public DataResult<List<Animal>> getAll() {
-        return new SuccessDataResult<List<Animal>>(this.animalDao.findAll(),"listed by getAll");
+        return new SuccessDataResult<List<Animal>>(this.animalDao.findAll(), "listed by getAll");
     }
-    
+
 }

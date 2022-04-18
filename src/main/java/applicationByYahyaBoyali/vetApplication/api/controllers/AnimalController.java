@@ -6,6 +6,7 @@
 package applicationByYahyaBoyali.vetApplication.api.controllers;
 
 import applicationByYahyaBoyali.vetApplication.bussiness.abstracts.AnimalService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,11 +21,25 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 @CrossOrigin
 public class AnimalController {
-    
+
     private AnimalService animalService;
+
+    @Autowired
+    public AnimalController(AnimalService animalService) {
+        this.animalService = animalService;
+    }
+
     @GetMapping("/")
-    public ModelAndView mainPage(){
+    public ModelAndView mainPage() {
         ModelAndView m = new ModelAndView("index");
         return m;
     }
+
+    @GetMapping("/AnimalList")
+    public ModelAndView getAnimalList() {
+        ModelAndView m = new ModelAndView("animalList");
+        m.addObject("animals", animalService.getAll().getData());
+        return m;
+    }
+
 }
