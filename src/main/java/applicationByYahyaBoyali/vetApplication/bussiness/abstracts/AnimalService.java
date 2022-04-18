@@ -5,10 +5,14 @@
  */
 package applicationByYahyaBoyali.vetApplication.bussiness.abstracts;
 
+import applicationByYahyaBoyali.vetApplication.core.utilities.results.DataResult;
+import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
+import java.util.List;
+
 /**
  *
  * @author yahya
  */
 public interface AnimalService {
-    
+    DataResult<List<Animal>> getAll();
 }

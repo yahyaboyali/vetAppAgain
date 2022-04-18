@@ -6,6 +6,11 @@
 package applicationByYahyaBoyali.vetApplication.bussiness.concretes;
 
 import applicationByYahyaBoyali.vetApplication.bussiness.abstracts.AnimalService;
+import applicationByYahyaBoyali.vetApplication.core.utilities.results.DataResult;
+import applicationByYahyaBoyali.vetApplication.core.utilities.results.SuccessDataResult;
+import applicationByYahyaBoyali.vetApplication.dataAccess.abstracts.AnimalDao;
+import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,5 +19,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AnimalManager implements AnimalService{
+
+    private AnimalDao animalDao;
+    @Override
+    public DataResult<List<Animal>> getAll() {
+        return new SuccessDataResult<List<Animal>>(this.animalDao.findAll(),"listed by getAll");
+    }
     
 }
