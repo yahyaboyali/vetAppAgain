@@ -5,7 +5,9 @@
  */
 package applicationByYahyaBoyali.vetApplication.bussiness.abstracts;
 
+import applicationByYahyaBoyali.vetApplication.core.utilities.Dtos.PersonEmailPasswordDto;
 import applicationByYahyaBoyali.vetApplication.core.utilities.entities.Person;
+import applicationByYahyaBoyali.vetApplication.core.utilities.results.DataResult;
 import applicationByYahyaBoyali.vetApplication.core.utilities.results.Result;
 
 /**
@@ -14,4 +16,5 @@ import applicationByYahyaBoyali.vetApplication.core.utilities.results.Result;
  */
 public interface PersonService {
     Result add(Person person);
+    DataResult getByEmailAndPassword(PersonEmailPasswordDto personEmailPasswordDto);
 }

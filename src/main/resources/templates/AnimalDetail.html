@@ -13,13 +13,14 @@ and open the template in the editor.
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
 </head>
 <body>
-<div>  
-    <div th:fragment="animalList" class="container">
+<div>
+   
+    <div class="container">
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Animal name</th>
                     <th scope="col">owner's name</th>
+                    <th scope="col">Animal name</th>
                     <th scope="col">species</th>
                     <th scope="col">genus</th>
                     <th scope="col">animal age</th>
@@ -27,9 +28,9 @@ and open the template in the editor.
                 </tr>   
             </thead>
             <tbody th:each="animal : ${animals}">
-                <tr>
-                    <td ><a class="nav-link " th:text="${animal.animalName}" th:href="@{/getByAnimalName/{animalName}(animalName=${animal.animalName})}"></a></td>
+                <tr >
                     <td th:text="${animal.person.personName}"></td>
+                    <td th:text="${animal.animalName}"></td>
                     <td th:text="${animal.species}"></td>
                     <td th:text="${animal.genus}"></td>
                     <td th:text="${animal.animalAge}"></td>

@@ -5,6 +5,7 @@
  */
 package applicationByYahyaBoyali.vetApplication.core.dataAccess;
 
+import applicationByYahyaBoyali.vetApplication.core.utilities.Dtos.PersonEmailPasswordDto;
 import applicationByYahyaBoyali.vetApplication.core.utilities.entities.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -14,4 +15,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface PersonDao extends JpaRepository<Person, Integer> {
     
+    boolean getByEmailAndPassword(String email,String password);
 }

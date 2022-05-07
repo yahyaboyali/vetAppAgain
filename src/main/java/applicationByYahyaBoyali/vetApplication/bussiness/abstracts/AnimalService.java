@@ -6,6 +6,7 @@
 package applicationByYahyaBoyali.vetApplication.bussiness.abstracts;
 
 import applicationByYahyaBoyali.vetApplication.core.utilities.results.DataResult;
+import applicationByYahyaBoyali.vetApplication.core.utilities.results.Result;
 import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
 import java.util.List;
 
@@ -14,5 +15,19 @@ import java.util.List;
  * @author yahya
  */
 public interface AnimalService {
+
     DataResult<List<Animal>> getAll();
+
+    DataResult<List<Animal>> getByAnimalName(String animalName);
+
+    DataResult<List<Animal>> getByAnimalNameContains(String keyword);
+
+    DataResult<List<Animal>> getByAnimalNameStartsWith(String keyword);
+
+    DataResult<Animal> getByAnimalId(int animalId);
+
+    String deleteByAnimalId(int animalId);
+
+    Result add(Animal animal);
+//    DataResult<List<Animal>> getByAnimalNameLike(String title);
 }

@@ -6,12 +6,23 @@
 package applicationByYahyaBoyali.vetApplication.dataAccess.abstracts;
 
 import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 /**
  *
  * @author yahya
  */
-public interface AnimalDao extends JpaRepository<Animal, Integer>{
+public interface AnimalDao extends JpaRepository<Animal, Integer> {
+
+    List<Animal> getByAnimalName(String animalName);
+
+    List<Animal> getByAnimalNameContains(String keyword);
+
+    List<Animal> getByAnimalNameStartsWith(String keyword);
     
+//    @Query("FROM Animal a WHERE a.animalName LIKE '%:title%'")
+//    List<Animal> getByAnimalNameLike(@Param("title") String title);
 }
