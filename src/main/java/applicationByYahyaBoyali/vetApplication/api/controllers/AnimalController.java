@@ -10,6 +10,7 @@ import applicationByYahyaBoyali.vetApplication.bussiness.abstracts.PersonService
 import applicationByYahyaBoyali.vetApplication.core.utilities.Dtos.PersonEmailPasswordDto;
 import applicationByYahyaBoyali.vetApplication.core.utilities.entities.Person;
 import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -76,7 +77,7 @@ public class AnimalController {
     }
 
     @GetMapping("/registerPerson")
-    public ModelAndView showAnimalAddPage() {
+    public ModelAndView showPersonAddPage() {
         Person person = new Person();
         ModelAndView m = new ModelAndView("RegisterPerson");
         m.addObject("person", person);
@@ -103,6 +104,54 @@ public class AnimalController {
         System.out.println(keyword);
         m.addObject("animals", this.animalService.getByAnimalNameStartsWith(keyword).getData());
         System.out.println(this.animalService.getByAnimalNameStartsWith(keyword).getData());
+        return m;
+    }
+
+    @GetMapping("/getByAnimalId")
+    public ModelAndView getByAnimalId(@RequestParam int animalId) {
+        ModelAndView m = new ModelAndView("index");
+
+        m.addObject("animals", this.animalService.getByAnimalId(animalId).getData());
+        return m;
+    }
+
+    @GetMapping("/deleteAnimal")
+    public ModelAndView deleteAnimal(@RequestParam int animalId) {
+        this.animalService.deleteByAnimalId(animalId);
+        ModelAndView m = new ModelAndView("AnimalList");
+        m.addObject("animals", this.animalService.getAll().getData());
+        return m;
+    }
+
+    @GetMapping("/AddAnimal")
+    public ModelAndView showAnimalAddPage() {
+        Animal animal = new Animal();
+        ModelAndView m = new ModelAndView("AddAnimal");
+        m.addObject("animal", animal);
+        return m;
+    }
+
+    @PostMapping("/saveAnimal")
+    public ModelAndView add(@ModelAttribute("animal") Animal animal) {
+        animalService.add(animal);
+        ModelAndView m = new ModelAndView("AnimalList");
+        m.addObject("animals", this.animalService.getAll().getData());
+        return m;
+    }
+
+    @GetMapping("/edit/{animalId}")
+    public ModelAndView showUpdateForm(@PathVariable("animalId") int animalId) {
+        Animal animal = animalService.getByAnimalId(animalId).getData();
+        ModelAndView m = new ModelAndView("AnimalUpdate");
+        m.addObject("animal", animal);
+        return m;
+    }
+
+    @PostMapping("/update/{animalId}")
+    public ModelAndView updateAnimal(@PathVariable("animalId") int animalId, @Valid Animal animal) {
+        animalService.add(animal);
+        ModelAndView m = new ModelAndView("AnimalList");
+        m.addObject("animals", this.animalService.getAll().getData());
         return m;
     }
 
