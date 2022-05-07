@@ -34,6 +34,12 @@ and open the template in the editor.
                     <td th:text="${animal.genus}"></td>
                     <td th:text="${animal.animalAge}"></td>
                     <td th:text="${animal.explanation}"></td>
+                    <td>
+                        <a th:href="@{/deleteAnimal(animalId=${animal.animalId})}" class="btn btn-danger ml-2">Delete</a>
+                    </td>
+                    <td>
+                    <td><a th:href="@{/edit/{animalId}(animalId=${animal.animalId})}" class="btn btn-primary">Update</a></td>
+                    </td>
                 </tr>
             </tbody>
         </table>
