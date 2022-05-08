@@ -29,5 +29,6 @@ public interface AnimalService {
     String deleteByAnimalId(int animalId);
 
     Result add(Animal animal);
+    DataResult<List<Animal>> getByPerson_PersonName(String personName);
 //    DataResult<List<Animal>> getByAnimalNameLike(String title);
 }

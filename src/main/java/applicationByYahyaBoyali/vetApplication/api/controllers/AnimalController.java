@@ -142,5 +142,11 @@ public class AnimalController {
         m.addObject("animals", this.animalService.getAll().getData());
         return m;
     }
+    @GetMapping("/animalListByPersonName/{personName}")
+    public ModelAndView getByPerson_PersonName(@PathVariable("personName") String personName){
+        ModelAndView m = new ModelAndView("AnimalDetail");
+        m.addObject("animals", this.animalService.getByPerson_PersonName(personName).getData());
+        return m;
+    }
 
 }

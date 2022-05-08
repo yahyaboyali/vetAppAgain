@@ -31,7 +31,7 @@ and open the template in the editor.
             <tbody th:each="animal : ${animals}">
                 <tr>
                     <td ><a class="nav-link " style="color: black; font-weight: bold" th:text="${animal.animalName}" th:href="@{/getByAnimalName/{animalName}(animalName=${animal.animalName})}"></a></td>
-                    <td th:text="${animal.person.personName}"></td>
+                     <td ><a class="nav-link " style="color: black; font-weight: bold" th:text="${animal.person.personName}" th:href="@{/animalListByPersonName/{personName}(personName=${animal.person.personName})}"></a></td>
                     <td th:text="${animal.species}"></td>
                     <td th:text="${animal.genus}"></td>
                     <td th:text="${animal.animalAge}"></td>

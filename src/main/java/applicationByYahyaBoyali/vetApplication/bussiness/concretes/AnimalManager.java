@@ -75,4 +75,9 @@ public class AnimalManager implements AnimalService {
         return new SuccessDataResult("added");
     }
 
+    @Override
+    public DataResult<List<Animal>> getByPerson_PersonName(String personName) {
+        return new SuccessDataResult(this.animalDao.getByPerson_PersonName(personName),"data listed by person name");
+    }
+
 }
