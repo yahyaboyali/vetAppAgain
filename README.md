@@ -10,6 +10,7 @@ genel isterler doğrultusunda büyük çoğunluğu yapabilen bir uygulama
 + PostgreSQL
 + Bootstrap
 + Thymleaf
++ lombok
 
 # Genel Dosyalama mimarisi görünümü
 
@@ -57,4 +58,14 @@ Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım.
 + hayvan listesinde detaylı görünüm için isminin üzerine tıklandığında açılan detay sayfası
 + kullanıcının ismine tıklandığında sahip olduğu hayvanlara ait detayların sayfası mevcut
 + [video linki](https://drive.google.com/file/d/11uDXZu7Hvx_xggBwcrkdLSThmVbJIySw/view?usp=sharing)
+#Kod tanıtımı
+Mimarimden de anlaşılacağı üzere:
++ Entity
++ dataAccess
++ bussiness 
++ core
++ api
++
+şeklinde kodlarımı parçaladım. entity kısmında tablodaki özelliklere göre verileri eşleştirdim
+lombok sayesinde constructor ve getter setter işlemlerimi yazmadan kolayca hallettim. 
 
