@@ -33,3 +33,7 @@ Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım.
 ![after login](https://i.hizliresim.com/m2ql7ws.PNG)
 ## hayvan listesi
 ![after login](https://i.hizliresim.com/nbu6inc.PNG)
+## hayvan ekleme
+![after login](https://i.hizliresim.com/ijdgv3r.PNG)
+## detaylı hayvan ismi üzerine tıklanınca çıkan görünüm
+![detay görünüm](https://i.hizliresim.com/8f2fizt.PNG)
