@@ -1,8 +1,29 @@
 # vetApplication
 genel isterler doğrultusunda büyük çoğunluğu yapabilen bir uygulama
 # UYGULAMAYI BAŞLATMA
+öncelikle application properties yapılandırılması gerekiyor
+veritabanı olarak postgresql kullandım yedeğini alıp github üzerinde vet.sql olarak ekledim. bu yedeği postgresql üzerinden verdiğim yedek dosyasını 
+kullanırsanız eğer işlemleri daha net görebilirsiniz. 
+application properties benim bilgilerime göre yapılanmış durumda.
+![image](https://user-images.githubusercontent.com/56196447/167312546-6e448362-2849-4c01-bd17-3d1e856a9fad.png)
+işaretlilerin kendi veritabanınıza göre düzenlemeniz gerekiyor. 
+## konsoldan başlatmak için
 
 # Kullanılan Teknolojiler
+konsoldan projenin klasörüne ilerlemeniz gerekiyor 
+cd proje yolu
+![image](https://user-images.githubusercontent.com/56196447/167312606-46fa6d20-8f31-422b-a566-ead6f8d668ad.png)
+bende böyle görünüyor. buraya geldiğimizde 
+mvnw install komutunu yazıyoruz 
+![image](https://user-images.githubusercontent.com/56196447/167312658-f7e7b407-2891-42ae-9a75-150362d86f2b.png)
+ardından gerekli işlemler tamamlandıktan sonra konsola 
+java -jar C:\Users\yahya\.m2\repository\applicationByYahyaBoyali\vetApplication\0.0.1-SNAPSHOT\vetApplication-0.0.1-SNAPSHOT.jar
+komutunu yazıyoruz sizde durum farklı olabilir o yüzden
+![image](https://user-images.githubusercontent.com/56196447/167312711-67bb7027-31a2-45f2-9822-d4ac247278ae.png)
+sarı ile işaretli yolu koplayayıp 
+java -jar kopyalanan yol şeklinde yapıştırmalısınız
+ardından enter tuşuna basınca uyulamamız çalışır hale gelecektir.
+![image](https://user-images.githubusercontent.com/56196447/167312741-14b0c997-8273-416c-8692-9c9b93197eb3.png)
 
 + Java
 + Spring boot
