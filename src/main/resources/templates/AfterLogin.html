@@ -26,13 +26,31 @@ and open the template in the editor.
             <col>
             <form class="d-flex p-2 bd-highlight" th:action="@{/getAnimalByAnimalName}" method="get">
                 <input class="form-control me-2" type="Text" placeholder="search animal by animal name" aria-label="Search" th:value="${animalName}" name="animalName">
-                    <button class="btn btn-outline-success" type="submit">search</button>
+                    <button class="btn btn-success" type="submit">search</button>
             </form>
             </col>
+        </row>
+        <row>
             <col>
             <form class="d-flex p-2 bd-highlight" th:action="@{/GetanimalListByPersonName}" method="get">
                 <input class="form-control me-2" type="Text" placeholder="search animal by person name" aria-label="Search" th:value="${personName}" name="personName">
-                    <button class="btn btn-outline-success" type="submit">search</button>
+                    <button class="btn btn-success" type="submit">search</button>
+            </form>
+            </col>
+        </row>
+        <row>
+            <col>
+            <form class="d-flex p-2 bd-highlight" th:action="@{/StartsWith}" method="get">
+                <input class="form-control me-2" type="Text" placeholder="search animal by starts with method" aria-label="Search" th:value="${animalName}" name="animalName">
+                    <button class="btn btn-success" type="submit">search</button>
+            </form>
+            </col>
+        </row>
+        <row>
+            <col>
+            <form class="d-flex p-2 bd-highlight" th:action="@{/getAnimalByContainsMethod}" method="get">
+                <input class="form-control me-2" type="Text" placeholder="search animal by name Contains method" aria-label="Search" th:value="${animalName}" name="animalName">
+                    <button class="btn btn-success" type="submit">search</button>
             </form>
             </col>
         </row>

@@ -163,11 +163,11 @@ public class AnimalController {
         m.addObject("animals", this.animalService.getByAnimalName(animalName).getData());
         return m;
     }
-    /*
-                <form class="d-flex p-2 bd-highlight" th:action="@{/getAnimalByAnimalName" method="get">
-                    <input class="form-control me-2" type="Text" placeholder="search animal with animal name"
-                       aria-label="Search" th:value="${animalName}" name="animalName">
-                    <button class="btn btn-outline-success" type="submit">search</button>
-            </form>
-     */
+
+    @GetMapping("/getAnimalByContainsMethod")
+    public ModelAndView getAnimalByAnimalNameContains(String animalName) {
+        ModelAndView m = new ModelAndView("AnimalDetail");
+        m.addObject("animals", this.animalService.getByAnimalNameContains(animalName).getData());
+        return m;
+    }
 }
