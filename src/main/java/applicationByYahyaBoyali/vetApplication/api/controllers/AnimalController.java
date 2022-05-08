@@ -61,7 +61,6 @@ public class AnimalController {
     public ModelAndView login() {
         ModelAndView m = new ModelAndView("AfterLogin");
         return m;
-        //<button type="button" class="btn btn-secondary btn-floating mb-3" ><a class="nav-link" style="color: black" href="/afterLogin">sign in</a></button>
     }
 
     @GetMapping("/registerPerson")
