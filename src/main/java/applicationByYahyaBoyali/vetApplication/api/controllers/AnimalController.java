@@ -89,7 +89,6 @@ public class AnimalController {
     @GetMapping("/StartsWith")
     public ModelAndView getByAnimalNameStartsWith(String animalName) {
         ModelAndView m = new ModelAndView("AnimalDetail");
-        System.out.println(animalName);
         m.addObject("animals", this.animalService.getByAnimalNameStartsWith(animalName).getData());
         return m;
     }
@@ -115,7 +114,6 @@ public class AnimalController {
         Animal animal = new Animal();
         ModelAndView m = new ModelAndView("AddAnimal");
         m.addObject("animal", animal);
-        m.addObject("animals", this.animalService.getAll().getData());
         return m;
     }
 
