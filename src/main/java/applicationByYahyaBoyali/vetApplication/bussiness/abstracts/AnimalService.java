@@ -30,5 +30,5 @@ public interface AnimalService {
 
     Result add(Animal animal);
     DataResult<List<Animal>> getByPerson_PersonName(String personName);
-//    DataResult<List<Animal>> getByAnimalNameLike(String title);
+    
 }

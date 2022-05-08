@@ -80,4 +80,5 @@ public class AnimalManager implements AnimalService {
         return new SuccessDataResult(this.animalDao.getByPerson_PersonName(personName),"data listed by person name");
     }
 
+
 }

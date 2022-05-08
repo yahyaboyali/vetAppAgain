@@ -7,7 +7,6 @@ package applicationByYahyaBoyali.vetApplication.api.controllers;
 
 import applicationByYahyaBoyali.vetApplication.bussiness.abstracts.AnimalService;
 import applicationByYahyaBoyali.vetApplication.bussiness.abstracts.PersonService;
-import applicationByYahyaBoyali.vetApplication.core.utilities.Dtos.PersonEmailPasswordDto;
 import applicationByYahyaBoyali.vetApplication.core.utilities.entities.Person;
 import applicationByYahyaBoyali.vetApplication.entities.concretes.Animal;
 import javax.validation.Valid;
@@ -116,6 +115,7 @@ public class AnimalController {
         Animal animal = new Animal();
         ModelAndView m = new ModelAndView("AddAnimal");
         m.addObject("animal", animal);
+        m.addObject("animals", this.animalService.getAll().getData());
         return m;
     }
 
@@ -142,11 +142,32 @@ public class AnimalController {
         m.addObject("animals", this.animalService.getAll().getData());
         return m;
     }
+
     @GetMapping("/animalListByPersonName/{personName}")
-    public ModelAndView getByPerson_PersonName(@PathVariable("personName") String personName){
+    public ModelAndView getByPerson_PersonName(@PathVariable("personName") String personName) {
         ModelAndView m = new ModelAndView("AnimalDetail");
         m.addObject("animals", this.animalService.getByPerson_PersonName(personName).getData());
         return m;
     }
 
+    @GetMapping("/GetanimalListByPersonName")
+    public ModelAndView getanimalBy_PersonName(String personName) {
+        ModelAndView m = new ModelAndView("AnimalDetail");
+        m.addObject("animals", this.animalService.getByPerson_PersonName(personName).getData());
+        return m;
+    }
+
+    @GetMapping("/getAnimalByAnimalName")
+    public ModelAndView getAnimlByAnimalName(String animalName) {
+        ModelAndView m = new ModelAndView("AnimalDetail");
+        m.addObject("animals", this.animalService.getByAnimalName(animalName).getData());
+        return m;
+    }
+    /*
+                <form class="d-flex p-2 bd-highlight" th:action="@{/getAnimalByAnimalName" method="get">
+                    <input class="form-control me-2" type="Text" placeholder="search animal with animal name"
+                       aria-label="Search" th:value="${animalName}" name="animalName">
+                    <button class="btn btn-outline-success" type="submit">search</button>
+            </form>
+     */
 }

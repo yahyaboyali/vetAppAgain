@@ -38,16 +38,14 @@ and open the template in the editor.
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">enter explanation</label>
                     <input type="text" th:field="*{explanation}" class="form-control" placeholder="enter explanation">
-                </div>
+                </div>  
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">enter personId</label>
                     <input type="text" th:field="*{person.personId}" class="form-control" placeholder="enter personId">
                 </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
     </div>
-</div>
 </body>
 </html>
