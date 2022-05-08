@@ -1,5 +1,6 @@
 # vetApplication
 genel isterler doğrultusunda büyük çoğunluğu yapabilen bir uygulama
+# UYGULAMAYI BAŞLATMA
 
 # Kullanılan Teknolojiler
 
