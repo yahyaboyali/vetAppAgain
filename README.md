@@ -51,6 +51,10 @@ Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım.
 + kullanıcı adına göre arama
 + başlangıç harflerine göre arama
 + içeriğinde girilen harfi içerenleri arama
-özellikleri mevcut
++ özellikleri mevcut
 [video linki](https://drive.google.com/file/d/1V5EHInSCOgv18aPVxqsHGR0k7jA1PclI/view?usp=sharing)
+## diğer bir videoda 
++ hayvan listesinde detaylı görünüm için isminin üzerine tıklandığında açılan detay sayfası
++ kullanıcının ismine tıklandığında sahip olduğu hayvanlara ait detayların sayfası mevcut
++ [video linki](https://drive.google.com/file/d/11uDXZu7Hvx_xggBwcrkdLSThmVbJIySw/view?usp=sharing)
 
