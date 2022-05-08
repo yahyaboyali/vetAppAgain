@@ -52,5 +52,5 @@ Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım.
 + başlangıç harflerine göre arama
 + içeriğinde girilen harfi içerenleri arama
 özellikleri mevcut
-![video linki](https://drive.google.com/file/d/1V5EHInSCOgv18aPVxqsHGR0k7jA1PclI/view?usp=sharing)
+[video linki](https://drive.google.com/file/d/1V5EHInSCOgv18aPVxqsHGR0k7jA1PclI/view?usp=sharing)
 
