@@ -39,3 +39,18 @@ Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım.
 ![detay görünüm](https://i.hizliresim.com/8f2fizt.PNG)
 ## detaylı hayvan ismi üzerine tıklanınca çıkan görünüm
 ![detay görünüm](https://i.hizliresim.com/ahrqbes.PNG)
+
+# İstenilen özelliklerin Video kayıtları
+## aşağıdaki videoda 
++ kullanıcı ekleme
++ hayvanları listeleme
++ güncelleme
++ silme
++ ekleme
++ isme göre arama 
++ kullanıcı adına göre arama
++ başlangıç harflerine göre arama
++ içeriğinde girilen harfi içerenleri arama
+özellikleri mevcut
+![video linki](https://drive.google.com/file/d/1V5EHInSCOgv18aPVxqsHGR0k7jA1PclI/view?usp=sharing)
+
