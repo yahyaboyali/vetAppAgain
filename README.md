@@ -23,3 +23,11 @@ Bir kullanıcının birden fazla hayvanı olabilmeli isteği için ilişkisini p
 
 Aynı veritabanı tasarımını Kodlarken Entitylerimde de kullandım. 
 ![ilişli görünümü](https://i.hizliresim.com/lj4zbnk.png)
+
+# sayfa görünümleri
+## login sayfası
+![login](https://i.hizliresim.com/2gswas7.PNG)
+## kullanıcı ekleme ekranı
+![kullanıcı ekleme](https://i.hizliresim.com/4jq91fx.PNG)
+## Giriş yapıldıktan sonraki ekran
+![after login](https://i.hizliresim.com/m2ql7ws.PNG)
