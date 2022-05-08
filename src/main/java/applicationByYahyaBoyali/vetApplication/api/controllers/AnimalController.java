@@ -58,17 +58,6 @@ public class AnimalController {
         return m;
     }
 
-//    @GetMapping("/AnimalListSearch/{keyword}")
-//    public ModelAndView getAnimalStartsWith(@PathVariable("keyword") String keyword) {
-//        ModelAndView m = new ModelAndView("AnimalDetail");
-//        m.addObject("animals", this.animalService.getByAnimalNameStartsWith(keyword).getData());
-//        return m;
-//    }
-//    @GetMapping("/afterLogin")
-//     public ModelAndView AfterLogin() {
-//        ModelAndView m = new ModelAndView("AfterLogin");
-//        return m;
-//    }
     @GetMapping("/login")
     public ModelAndView login() {
         ModelAndView m = new ModelAndView("AfterLogin");
@@ -99,11 +88,10 @@ public class AnimalController {
     }
 
     @GetMapping("/StartsWith")
-    public ModelAndView getByAnimalNameStartsWith(String keyword) {
+    public ModelAndView getByAnimalNameStartsWith(String animalName) {
         ModelAndView m = new ModelAndView("AnimalDetail");
-        System.out.println(keyword);
-        m.addObject("animals", this.animalService.getByAnimalNameStartsWith(keyword).getData());
-        System.out.println(this.animalService.getByAnimalNameStartsWith(keyword).getData());
+        System.out.println(animalName);
+        m.addObject("animals", this.animalService.getByAnimalNameStartsWith(animalName).getData());
         return m;
     }
 

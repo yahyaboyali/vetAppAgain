@@ -19,9 +19,9 @@ public interface AnimalDao extends JpaRepository<Animal, Integer> {
 
     List<Animal> getByAnimalName(String animalName);
 
-    List<Animal> getByAnimalNameContains(String keyword);
+    List<Animal> getByAnimalNameContains(String animalName);
 
-    List<Animal> getByAnimalNameStartsWith(String keyword);
+    List<Animal> getByAnimalNameStartsWith(String animalName);
     
 //    @Query("FROM Animal a WHERE a.animalName LIKE '%:title%'")
 //    List<Animal> getByAnimalNameLike(@Param("title") String title);

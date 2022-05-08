@@ -41,13 +41,13 @@ public class AnimalManager implements AnimalService {
     }
 
     @Override
-    public DataResult<List<Animal>> getByAnimalNameContains(String keyword) {
-        return new SuccessDataResult(this.animalDao.getByAnimalNameContains(keyword), "data listed");
+    public DataResult<List<Animal>> getByAnimalNameContains(String animalName) {
+        return new SuccessDataResult(this.animalDao.getByAnimalNameContains(animalName), "data listed");
     }
 
     @Override
-    public DataResult<List<Animal>> getByAnimalNameStartsWith(String keyword) {
-        return new SuccessDataResult(this.animalDao.getByAnimalNameStartsWith(keyword), "data listed by starts with");
+    public DataResult<List<Animal>> getByAnimalNameStartsWith(String animalName) {
+        return new SuccessDataResult(this.animalDao.getByAnimalNameStartsWith(animalName), "data listed by starts with");
     }
 
 //    @Override

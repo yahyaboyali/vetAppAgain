@@ -20,9 +20,9 @@ public interface AnimalService {
 
     DataResult<List<Animal>> getByAnimalName(String animalName);
 
-    DataResult<List<Animal>> getByAnimalNameContains(String keyword);
+    DataResult<List<Animal>> getByAnimalNameContains(String animalName);
 
-    DataResult<List<Animal>> getByAnimalNameStartsWith(String keyword);
+    DataResult<List<Animal>> getByAnimalNameStartsWith(String animalName);
 
     DataResult<Animal> getByAnimalId(int animalId);
 
